@@ -33,13 +33,11 @@ mainWindow.show();
 
 scatterRandom.onClick = function() {
     
-//random position
 var layerPosition = app.project.activeItem.selectedLayers[0].transform.position;
 if (layerPosition.canSetExpression) {
     layerPosition.expression = "wiggle(0,1000)";
     }
-    
-//random rotation
+
 if (rotationRandom.value == true) {
     var layerRotate = app.project.activeItem.selectedLayers[0].transform.rotation;
     if (layerRotate.canSetExpression) {
@@ -47,7 +45,6 @@ if (rotationRandom.value == true) {
     }
 }
     
-//random scale
 if (sizeRandom.value == true) {
     var layerScale = app.project.activeItem.selectedLayers[0].transform.scale;
     if (layerScale.canSetExpression) {
@@ -55,7 +52,6 @@ if (sizeRandom.value == true) {
     }
 }
     
-//random opacity
 if (opacityRandom.value == true) {
     var layerOpacity = app.project.activeItem.selectedLayers[0].transform.opacity;
     if (layerOpacity.canSetExpression) {
@@ -63,7 +59,6 @@ if (opacityRandom.value == true) {
     }
 }
 
-//duplicate layer
 var layer = app.project.activeItem.selectedLayers;
 for(var i=0; i<amountSlider.value; i++) {
     layer[0].duplicate();
